@@ -3,7 +3,6 @@
 var result = "";
 	result += "<link rel=\"stylesheet\" type=\"text/css\"  href=\"..\/header\/header.css\" />"
 			+"<span class = \"logo\">"
-		   		+ "<img src=\"\" />"
         	 	+ "logo"
     		+ "</span>"
 			
@@ -11,24 +10,27 @@ var result = "";
     			+ "<input placeholder=\"Search\" />"
     		+ "</span>"
 			
-			+"<span class = \"home\">"
-    			+ "Home"
-			+ "</span>"
 			
-			+"<span class = \"home\">"
-    		+ "Jobs"
-			+ "</span>"
-			
-			+"<span class = \"message\">"
-    		+ "Messaging"
-			+ "</span>"
-			
-			+"<span class = \"notification\">"
-    		+ "Notifications"
-			+ "</span>"
-			
-			+"<span class = \"myPage\">"
-    		+ "My page"
+			+"<span class = \"tag\">"
+				+"<span class = \"home\">"
+					+ "<img src= \"..\/header\/icons\/home.png\">"
+				+ "</span>"
+				
+				+"<span class = \"job\">"
+					+ "<img src= \"..\/header\/icons\/job.png\">"
+				+ "</span>"
+				
+				+"<span class = \"message\">"
+					+ "<img src= \"..\/header\/icons\/message.png\">"
+				+ "</span>"
+				
+				+"<span class = \"notification\">"
+					+ "<img src= \"..\/header\/icons\/notification.png\">"
+				+ "</span>"
+				
+				+"<span class = \"myPage\">"
+					+ "<img src= \"..\/header\/icons\/myPage.png\">"
+				+ "</span>"
 			+ "</span>";
 	
 document.write(result);
