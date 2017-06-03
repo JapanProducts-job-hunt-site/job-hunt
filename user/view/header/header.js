@@ -1,7 +1,7 @@
 // Header
 
 var result = "";
-	result += "<link rel=\"stylesheet\" type=\"text/css\" href=\"header.css\" />"
+	result += "<link rel=\"stylesheet\" type=\"text/css\"  href=\"..\/header\/header.css\" />"
 			+"<span class = \"logo\">"
 		   		+ "<img src=\"\" />"
         	 	+ "logo"
