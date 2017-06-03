@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* CSS Document */
+.photo
+{
+	margin-left: 11%;
+    width: 19%;
+    margin-top: 11%;
+}
+
+.edit
+{
+	float: right;
+    margin-top: -11%;
+    width: 6%;
+    margin-right: -5%;
+}
+
+.edit2
+{
+	float: right;
+    margin-top: -7%;
+    width: 4%;
+    margin-right: -3%;
+}
+
+.baseInfo
+{
+	padding: 4.3%;
+    border: 2px solid lightgray;
+    margin-top: -17%;
+    margin-left: 33%;
+    margin-right: 10%;
+	color: lightslategrey;
+}
+
+.history
+{
+	padding: 3.3%;
+    border: 2px solid lightgray;
+    margin-top: 3%;
+    margin-left: 11%;
+    margin-right: 10%;
+}
+
+.skill
+{
+	padding: 3.3%;
+    border: 2px solid lightgray;
+    margin-top: 3%;
+    margin-left: 11%;
+    margin-right: 10%;
+}
+
+.workPlace
+{
+	padding: 3.3%;
+    border: 2px solid lightgray;
+    margin-top: 3%;
+    margin-left: 11%;
+    margin-right: 10%;
+}
+
