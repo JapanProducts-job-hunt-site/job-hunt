@@ -1,45 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Japan Product Job Hunt</title>
+    <meta charset="utf-8">
+    <title>Angular Bootstrap Demo</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- bootstrap themas -->
+    <link rel="stylesheet" href="http://bootswatch.com/superhero/bootstrap.min.css">
 </head>
 <body>
-<div id="header">
-    <div id="nav">
-        <ul>
-            <a href="#about">About</a>
-            <a href="#bussiness-hour">Requiting</a>
-            <a href="#registration">Registration</a>
-            <a href="#japanProduct">Japan Product</a>
-            <!-- <a href="#location"></a>
-
-            <a href="views/elements/reward.html">Reward</a>
-            <a href="lang.html"></a>
-            <span style="word-spacing:normal; color:white; font-family:'Annie Use Your Telescope', arial, serif; font-size:20px;">
-           Click a link
-        </span> -->
-
-
-        </ul>
-    </div><!-- nav -->
-</div><!-- header -->
-<div id="page1">
-    <a id="about" class="smooth"></a>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1>About</h1>
-    <div class="intro-container">
-        <h3></h3>
-        <p>
-            Every dish is a wonder to behold,<br>
-            a perfect combination of ingredients as a celebration of the seasons.
-        </p>
+<app-root></app-root>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome</h1>
+        <h2>recruiting help is here </h2>
     </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Status</div>
+        <div class="panel-body">
+            <h3>{{title}}</h3>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Registration</div>
+        <div class="panel-body">
+            <a href="#" class="btn btn-info">Registration</a>
 
+            <form class="form-horizontal" action="http://localhost:3000/register">
+                <fieldset>
+                    <legend>Job Offer Registration</legend>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Company Name</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" placeholder="Company Name" name="comp_name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Location</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control"  placeholder="Location" name="location">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Industry</label>
+                        <div class="col-lg-10">
+                            <input type="password" class="form-control" placeholder="industry" name="industry">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="textArea" class="col-lg-2 control-label">Job Description</label>
+                        <div class="col-lg-10">
+                            <textarea class="form-control" rows="3" id="textArea"></textarea>
+                            <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="select" class="col-lg-2 control-label">Career Level</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="select">
+                                <option>Internship</option>
+                                <option>Entry</option>
+                                <option>Junior</option>
+                                <option>Senior</option>
+                            </select>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10">
+                            <label class="col-lg-2 control-label">Role/Type</label>
+                            <input type="text" class="form-control" placeholder="role" name="role">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button type="reset" class="btn btn-default">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
 </body>
+
 </html>
