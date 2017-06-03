@@ -8,4 +8,41 @@
 
 .search
 {
+	margin-left:5%;
+}
+
+
+.tag
+{
+	float:right;
+	width: 55%;
+	vertical-align:middle;
+}
+
+.home img
+{
+	height:40px;
+	margin-right:15%;
+}
+
+.job img
+{
+	height:55px;
+	margin-right:15%;
+}
+.message img
+{
+	height:35px;
+	margin-right:15%;
+}
+
+.notification img
+{
+	height:35px;
+	margin-right:15%;
+}
+
+.myPage img
+{
+	height:55px;
 }
