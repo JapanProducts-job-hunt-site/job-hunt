@@ -12,6 +12,7 @@ app.all("/", function (req, res) {
 });
 app.get("/register", function(req, res){
     res.send(req.query.comp_name);
+    //after pushing registor button
 });
 
 app.listen(port);
