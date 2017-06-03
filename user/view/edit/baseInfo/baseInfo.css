@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.editArea
+{
+	margin-left:36%;
+	margin-top:7%;
+}
+
+.format
+{
+	width: 45%; 
+	line-height: 3;
+}
