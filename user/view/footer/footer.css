@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* CSS Document */
+.footer 
+{
+    position: inherit;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: lightslategray;
+    text-align: center;
+    margin-top: 5%;
+}
