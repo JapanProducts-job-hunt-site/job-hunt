@@ -1,8 +1,6 @@
 // Header
 
 var currentPage = window.location.href;
-
-
 var result = "";
 
 if(currentPage == "file://macintosh%20hd/Users/KishikawaItaru/GitHub/job-hunt/user/view/edit/baseInfo/baseInfo.html")
@@ -13,7 +11,7 @@ else
 			result += "<span class = \"logo\">"
         	 	+ "logo"
     		+ "</span>"
-			
+	
     		+ "<span class = \"search\">"
     			+ "<input placeholder=\"Search\" />"
     		+ "</span>"
