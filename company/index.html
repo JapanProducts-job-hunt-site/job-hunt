@@ -13,19 +13,54 @@
 </head>
 <body>
 <app-root></app-root>
+<!-- navigation bar -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#status">Status <span class="sr-only">(current)</span></a></li>
+                <li><a href="#registration">Registration</a></li>
+                <li><a href="#JapanProduct">Japan Product </a></li>
+
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- end navigation bar -->
 <div class="container">
     <div class="jumbotron">
         <h1>Welcome</h1>
         <h2>recruiting help is here </h2>
     </div>
+    <!-- status -->
     <div class="panel panel-primary">
-        <div class="panel-heading">Status</div>
+        <div class="panel-heading" id="status">Status</div>
         <div class="panel-body">
             <h3>{{title}}</h3>
         </div>
     </div>
+    <!-- registoration -->
     <div class="panel panel-primary">
-        <div class="panel-heading">Registration</div>
+        <div class="panel-heading" id="registration">Registration</div>
         <div class="panel-body">
             <a href="#" class="btn btn-info">Registration</a>
 
@@ -47,7 +82,7 @@
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Industry</label>
                         <div class="col-lg-10">
-                            <input type="password" class="form-control" placeholder="industry" name="industry">
+                            <input class="form-control" placeholder="industry" name="industry">
                         </div>
                     </div>
                     <div class="form-group">
@@ -70,10 +105,37 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-lg-2 control-label">Role</label>
                         <div class="col-lg-10">
-                            <label class="col-lg-2 control-label">Role/Type</label>
                             <input type="text" class="form-control" placeholder="role" name="role">
+                            <script>
+                                var cities = new Bloodhound({
+                                    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('text'),
+                                    queryTokenizer: Bloodhound.tokenizers.whitespace,
+                                    prefetch: 'assets/cities.json'
+                                });
+                                cities.initialize();
+
+                                var elt = $('input');
+                                elt.tagsinput({
+                                    itemValue: 'value',
+                                    itemText: 'text',
+                                    typeaheadjs: {
+                                        name: 'cities',
+                                        displayKey: 'text',
+                                        source: cities.ttAdapter()
+                                    }
+                                });
+                                elt.tagsinput('add', { "value": 1 , "text": "Amsterdam"   , "continent": "Europe"    });
+                                elt.tagsinput('add', { "value": 4 , "text": "Washington"  , "continent": "America"   });
+                                elt.tagsinput('add', { "value": 7 , "text": "Sydney"      , "continent": "Australia" });
+                                elt.tagsinput('add', { "value": 10, "text": "Beijing"     , "continent": "Asia"      });
+                                elt.tagsinput('add', { "value": 13, "text": "Cairo"       , "continent": "Africa"    });
+                            </script>
                         </div>
+                    </div>
+                    <div>
+                        <label class="col-lg-2 control-label">Type</label>
                     </div>
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
@@ -84,6 +146,13 @@
 
                 </fieldset>
             </form>
+        </div>
+    </div>
+    <!-- end of registration -->
+    <div class="panel panel-primary">
+        <div class="panel-heading">Japan Product</div>
+        <div class="panel-body">
+            <h3>{{title}}</h3>
         </div>
     </div>
 </div>

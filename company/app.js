@@ -11,8 +11,19 @@ app.all("/", function (req, res) {
    res.sendFile(__dirname + "/index.html");
 });
 app.get("/register", function(req, res){
-    res.send(req.query.comp_name);
+    var offer_info = {
+        "company": req.query.comp_name,
+        "location": req.query.location,
+        "Industry": req.query.industry
+    };
+
+
+    res.send(offer_info);
+
+
     //after pushing registor button
 });
 
-app.listen(port);
+app.listen(port, function () {
+    console.log("Run @ http://localhost:"+port);
+});//listen
