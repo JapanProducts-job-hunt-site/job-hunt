@@ -16,40 +16,40 @@
 Sign Up
 </div>
 
-<div class = "editArea">
+<form class = "editArea" action="insert" method="post">
     <div>
     名前<span style="color:RED"> *</span>
     </div>
     <div>
-    <input class = "format" placeholder="名前" required/>
+    <input class = "format" placeholder="名前" name = "name"/>
     </div>
     
     <div>
     学歴<span style="color:RED"> *</span>
     </div>
     <div>
-    <input class = "format" placeholder="学歴"/>
+    <input class = "format" placeholder="学歴" name = "education"/>
     </div>
     
     <div>
     場所<span style="color:RED"> *</span>
     </div>
     <div>
-    <input class = "format" placeholder="場所"/>
+    <input class = "format" placeholder="場所" name = "place"/>
     </div>
     
     <div>
     E-mail<span style="color:RED"> *</span>
     </div>
     <div>
-    <input class = "format" placeholder="E-mail"/>
+    <input class = "format" placeholder="E-mail" name = "e-mail"/>
     </div>
     
     <div>
     パスワード<span style="color:RED"> *</span>
     </div>
     <div>
-    <input class = "format" placeholder="8文字以上"/>
+    <input class = "format" placeholder="8文字以上" name = "password"/>
     </div>
     
     <div>
@@ -63,9 +63,9 @@ Sign Up
     自己紹介
     </div>
     <div>
-    <textarea cols = "50" rows = "7" placeholder="自己紹介" style="width:45%"></textarea>
+    <textarea cols = "50" rows = "7" placeholder="自己紹介" style="width:45%" name = "profile"></textarea>
     </div>
-</div>
+</form>
 
 <div class = "center">
 	<button class = "cancel" type="cancel">Cancel</button>
