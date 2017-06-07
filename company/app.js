@@ -11,6 +11,7 @@ app.all("/", function (req, res) {
    res.sendFile(__dirname + "/index.html");
 });
 app.get("/register", function(req, res){
+
     res.send(req.query.comp_name);
     //after pushing registor button
 });
