@@ -1,63 +1,71 @@
-@charset "UTF-8";
-/* CSS Document */
-
-.photo
-{
-	margin-left: 11%;
-    width: 19%;
-    margin-top: 11%;
+.mainbody {
+    background:#f0f0f0;
+}
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    margin-left: -15px;
+    margin-right: -15px;
 }
 
-.edit
-{
-	float: right;
-    margin-top: -11%;
-    width: 6%;
-    margin-right: -5%;
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+.navbar-wrapper .navbar {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.edit2
+.navbar-content
 {
-	float: right;
-    margin-top: -7%;
-    width: 4%;
-    margin-right: -3%;
+    width:320px;
+    padding: 15px;
+    padding-bottom:0px;
+}
+.navbar-content:before, .navbar-content:after
+{
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.navbar-nav.navbar-right:last-child {
+    margin-right: 15px !important;
+}
+.navbar-footer
+{
+    background-color:#DDD;
+}
+.navbar-footer-content { padding:15px 15px 15px 15px; }
+.dropdown-menu {
+    padding: 0px;
+    overflow: hidden;
 }
 
-.baseInfo
-{
-	padding: 4.3%;
-    border: 2px solid lightgray;
-    margin-top: -17%;
-    margin-left: 33%;
-    margin-right: 10%;
-	color: lightslategrey;
+.brand_network {
+    color: #9D9D9D;
+    float: left;
+    position: absolute;
+    left: 70px;
+    top: 30px;
+    font-size: smaller;
 }
 
-.history
-{
-	padding: 3.3%;
-    border: 2px solid lightgray;
-    margin-top: 3%;
-    margin-left: 11%;
-    margin-right: 10%;
+.post-content {
+    margin-left:58px;
 }
 
-.skill
-{
-	padding: 3.3%;
-    border: 2px solid lightgray;
-    margin-top: 3%;
-    margin-left: 11%;
-    margin-right: 10%;
+.badge-important {
+    margin-top: 3px;
+    margin-left: 25px;
+    position: absolute;
 }
 
-.workPlace
-{
-	padding: 3.3%;
-    border: 2px solid lightgray;
-    margin-top: 3%;
-    margin-left: 11%;
-    margin-right: 10%;
+body {
+    background-color: #e8e8e8;
 }
-
