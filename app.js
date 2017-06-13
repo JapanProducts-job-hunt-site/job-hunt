@@ -5,6 +5,10 @@ var mongodb = require('mongodb').MongoClient;
 var assert = require('assert');
 var bodyParser  = require("body-parser");
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+var url = 'mongodb://localhost:27017/test';
+
 
 /*
  app.use(express.static(__dirname + '/public'));
@@ -43,8 +47,7 @@ app
     });
 
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+
 
 app.post("/insert", function(req, res, next)
 {
@@ -72,8 +75,33 @@ app.post("/insert", function(req, res, next)
     });
 });
 
+app.get("/getData", function(req, res, next)
+{
+    mongodb.connect(url, function(err, db)
+    {
+        assert.equal(null, err); //check if there is error or not. If ok, continue
+        db.collection('userData').findOne({email: req.query.email, password: req.query.password}, function(err, result)
+        {
+           assert.equal(null, err);
+           if(err)
+           {
+               console.log("Something went wrong");
+           }
+           else if(!result)
+           {
+               //req.flash('error', 'Username and password are incorrect');
+               res.redirect('/login');
+               console.log("User name not found or password is wrong.");
+           }
+           else
+           {
+               res.sendFile(__dirname + "/user/view/myPage/myPage.html");
+           }
+        });
+    });
+});
 
-var url = 'mongodb://localhost:27017/test';
+
 
 router.get('/', function(req, res, next)
 {
